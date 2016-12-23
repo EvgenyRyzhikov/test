@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>We Shop Smart</title>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Slick")
+
+    <!-- Google Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+    @Styles.Render("~/Content/Custom")
+
+    <!-- jQuery -->
+    @Scripts.Render("~/bundles/jquery")
+    <script>
+            $(document).ready(function(){
+                  /*$(".added-case1").hide();
+                  $(".added-case2").hide();
+                   $("div#case1").click(function(){*/
+                         /*
+                         var item = document.createElement("div");
+                         item.innerHTML = "<div class='row added'><div class='col-md-3 col-cs-12'><div class='offer-card'><div class='card-front'><div class='offer-img'><img src='img/panelLogo.jpg' class='img-responsive center-block'></div></div><div class='card-back'><p class='mb30 mt15'><strong>Innovations (AU & NZ)</strong></p><p class='mb0'>Name: Fill your home with Christmas cheer! Shop Garlands, Trees and more at Innovations. Click Here! Description: Fill your home with Christmas   <a href='' class='readMore'>  Read more..</a></p><p class='mb30'><strong>Cashback upto 8.00 %</strong></p><p class='mb30'><strong>Use this code at the store checkout:</strong></p></div></div></div><div class='col-md-3 col-cs-12'><div class='offer-card'><div class='card-front'><div class='offer-img'><img src='img/panelLogo.jpg' class='img-responsive center-block'></div></div><div class='card-back'><p class='mb30 mt15'><strong>Innovations (AU & NZ)</strong></p><p class='mb0'>Name: Fill your home with Christmas cheer! Shop Garlands, Trees and more at Innovations. Click Here! Description: Fill your home with Christmas   <a href='' class='readMore'>  Read more..</a></p><p class='mb30'><strong>Cashback upto 8.00 %</strong></p><p class='mb30'><strong>Use this code at the store checkout:</strong></p></div></div></div>";
+
+                         // $(".'").after(item);
+                         */
+                         /*$(".added-case2").hide();
+                         $(".added-case1").toggle(500);
+                  });
+                  $("div#case2").click(function(){
+                        $(".added-case1").hide();
+                        $(".added-case2").toggle(500);
+                  });*/
+
+                /*$(".card-back .offer-box2").click(function() {
+                    $(".added-case:not(#" + $(this).data("added-case") + ")").hide();
+
+                    $("#" + $(this).data("added-case")).toggle(500);
+                });*/
+            });
+    </script>
+</head>
+
+<body>
+    <!-- menu -->
+    <header id="menu-header">
+        <div class="top-banner">
+            <img src="@Url.Content("~/Content/Images/menu-banner.jpg")">
+        </div>
+        <section class="menu-sec bg-white">
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-menu" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" id="bs-menu">
+                        <ul class="nav navbar-nav">
+                            <li>
+                                <a href="index.html"><img src="@Url.Content("~/Content/Images/shop-icon.png")"><span>Home</span></a>
+                            </li>
+                            <li>
+                                <a href="category.html"><img src="@Url.Content("~/Content/Images/category-icon.png")"><span>Categories</span></a>
+                            </li>
+                            <li>
+                                <a href="sales.html"><img src="@Url.Content("~/Content/Images/sale-icon.png")"><span>Sales</span></a>
+                            </li>
+                            <li>
+                                <a href="specials.html"><img src="@Url.Content("~/Content/Images/special-icon.png")"><span>Specials</span></a>
+                            </li>
+                            <li>
+                                <a href="favourite.html"><img src="@Url.Content("~/Content/Images/favourite-icon.png")"><span>Favourites</span></a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a href="#"><img src="@Url.Content("~/Content/Images/home-icon.png")"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="@Url.Content("~/Content/Images/user-icon.png")"></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="@Url.Content("~/Content/Images/logout-icon.png")"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+            <div class="container">
+                <div class="pd-10">
+                    <div class="row">
+                        <div class="col-sm-5" style="padding-left: 33px; padding-right: 40px">
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control input-round input-lg" placeholder="What are you looking for?">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-sm-5 ">
+                            <div class="row">
+                                <div class="col-md-9 imp-tips-wrapper">
+                                    <div class="row" style="margin-right: -5px;">
+                                        <div class="col-md-9 text-right"><h3 style="margin-top: 10px;" data-toggle="modal" data-target="#myModal"><strong>IMPORTANT TIPS</strong></h3></div>
+                                        <div class="col-md-3 helpicon" style="margin-top: 5px;">
+                                            <img data-toggle="modal" data-target="#myModal" class="gps_ringimg" src="@Url.Content("~/Content/Images/HelpFilled-50.png")" style="height:36px; width:36px">
+
+                                            <div class="gps_ring"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-2 text-right text-center-xs">
+                            <a href="" class="btn btn-lg btn-round  btn-brown">Savings Calculator</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+    
+    @RenderBody()
+
+    <!-- footer -->
+    <footer>
+        <section class="footer-sec">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="text-uppercase">HELP & SUPPORT</h3>
+                                <ul class="list-unstyled foot-links">
+                                    <li><a href="">FAQs</a></li>
+                                    <li><a href="">Contact Us</a></li>
+                                    <li><a href="">Site Map</a></li>
+                                    <li><a href="">Home</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 class="text-uppercase">LEARN ABOUT US</h3>
+                                <ul class="list-unstyled foot-links">
+                                    <li><a href="">How It Works</a></li>
+                                    <li><a href="">Privacy Policy</a></li>
+                                    <li><a href="">Terms and Conditions</a></li>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Partner With Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h3 class="text-uppercase">Shop, Save & Earn</h3>
+                                <ul class="list-unstyled foot-links">
+                                    <li><a href="">Stores</a></li>
+                                    <li><a href="">Sales</a></li>
+                                    <li><a href="">Today's Most Popular Deals</a></li>
+                                    <li><a href="">Today's Best Offers</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 class="text-uppercase">Safe & Secure</h3>
+                                <!-- <ul class="list-unstyled foot-links">
+                                <li><a href="">How It Works</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="">Terms and Conditions</a></li>
+                                <li><a href="">About Us</a></li>
+                                <li><a href="">Partner With Us</a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="below-footer-sec">
+                  <div class="container">
+                        <p class="text-center copyright-text">This Cash Back Program is managed by We Shop Smart as a genuine employees, members benefit program.
+                              Copyright &copy;
+                              We Shop Smart</p>
+                  </div>
+            </section>
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color: #fff; opacity: 1;">×</button>
+                        <h1 class="modal-title">Important Tips</h1>
+                    </div>
+                    <div class="modal-body ">
+                        <section>
+                            <div class="container col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6" style="background-color: #b47b46; color: #fff;">
+                                        <h3>We Shop Smart Cashback Information!</h3>
+                                    </div>
+                                    <div class="col-md-6" style="background-color: #242B3B; color: #fff;">
+                                        <h3>Cashback Timetable!</h3>
+                                    </div>
+                                    <div class="col-md-6" style="background-color: #b47b46; color: #fff; min-height: 300px;">
+                                        <h4>Helpful tips for ensuring cashback works for you</h4>
+                                        <ul>
+                                            <li>Click on the Go To Store buttons and the store website will open in a new window.</li>
+                                            <li><strong>Make sure you complete your purchase without opening any other websites.(incl. Google)</strong></li>
+                                            <li><strong>If installed disable Adblock browser extensions and ensure cookies are enabled</strong></li>
+                                            <li>If you use a coupon code that is not listed on this site, rewards may not be payable.</li>
+                                            <li>Rewards are payable on eligible purchases not including freight, delivery and GST.</li>
+                                            <li>Cashback may not be payable if you pay by gift card or if you purchase a gift card.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6" style="background-color: #242B3B; color: #fff;min-height: 300px;">
+
+                                        <h3>Notification: Up to 7 Days</h3>
+                                        <p>
+                                            Rewards may take 7 days to be credited to your account.
+                                            You will receive an email to advise your rewards are pending and awaiting confirmation.
+                                        </p>
+                                        <h3>Confirmation: Up to 90 Days</h3>
+                                        <p>
+                                            The return period of the goods has passed and the store has confirmed your cashback.
+                                            Your rewards are now available for payment.
+                                        </p>
+                                    </div>
+                                </div>
+                                </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Bootstrap & other JavaScript -->
+        @Scripts.Render("~/bundles/bootstrap")
+        @Scripts.Render("~/bundles/Slick")
+        @Scripts.Render("~/bundles/simplyscroll")
+
+        @Scripts.Render("~/bundles/CustomJs")
+
+
+        <script>
+			var $post = $(".helpicon");
+                        setInterval(function(){
+                        $post.toggleClass("helpicondisplay");
+                        }, 20000);
+        </script>
+
+    </footer>
+</body>
+
+</html>
